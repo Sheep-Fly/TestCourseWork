@@ -55,8 +55,9 @@ if __name__ == '__main__':
 
     TempListTree1 = []  # Store the new list for calculate the median of 'tree1'
     tree1 = RBTree()
-    data1 = list(range(1, 21))  # create numbers for creating tree
-    random.shuffle(data1)    # random sort 'data1'
+    # data1 = list(range(1, 21))  # create numbers for creating tree
+    # random.shuffle(data1)    # random sort 'data1'
+    data1 = random.sample(range(1, 21), 15)
     print('\n20 numbers from 1 to 20 random sort in data1: ', data1)
     # Insert
     for elem in data1:    # add numbers in 'data1' into 'tree1'
@@ -64,9 +65,7 @@ if __name__ == '__main__':
 
     TempListTree2 = []  # Store the new list of intersection(t1, t2)
     tree2 = RBTree()    # tree t2 is merged target
-    data2 = [0] * 5
-    for i in range(5):
-        data2[i] = random.randint(-10, 31)
+    data2 = random.sample(range(-10, 20), 5)
     print('\n5 numbers between -10 and 30 in data2: ', data2)
     for elem in data2:     # add numbers in 'data2' into 'tree2'
         tree2.add_node(RBNode(elem))
@@ -81,11 +80,8 @@ if __name__ == '__main__':
     # Search
     random.shuffle(data1)   # Re-order data1
     print('\nThe number I want to find is the last number after re-order data1 is:', data1[-1])
-    findResult = tree1.get_node(data1[-1])     # get node
-    if findResult:
-        print(f"\nThe node exist, the node address is {findResult}")
-    else:
-        print('\nThe node does not exist!')
+    findNumber = tree1.get_node(data1[-1])     # get node
+    # output number?
 
     # max
     maxValueNode = tree1.tree_maximum(tree1.root)
