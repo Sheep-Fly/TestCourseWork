@@ -27,12 +27,12 @@ class RBNode:
     def set_red_node(self):
         self.color = "R"
 
-    def printNode(self):
-        if self.left:
-            self.left.print()
-        print(self.value)
-        if self.right:
-            self.right.print()
+#     def printNode(self):
+#         if self.left:
+#             self.left.print()
+#         print(self.value)
+#         if self.right:
+#             self.right.print()
 
 # Red-Black Tree
 class RBTree:
