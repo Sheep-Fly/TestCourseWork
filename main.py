@@ -81,8 +81,11 @@ if __name__ == '__main__':
     # Search
     random.shuffle(data1)   # Re-order data1
     print('\nThe number I want to find is the last number after re-order data1 is:', data1[-1])
-    findNumber = tree1.get_node(data1[-1])     # get node
-    # output number?
+    findResult = tree1.get_node(data1[-1])     # get node
+    if findResult:
+        print(f"\nThe node exist, the node address is {findResult}")
+    else:
+        print('\nThe node does not exist!')
 
     # max
     maxValueNode = tree1.tree_maximum(tree1.root)
