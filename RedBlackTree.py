@@ -24,7 +24,7 @@ class RBNode:
     def set_black_node(self):
         self.color = "B"
 
-    def set_red_node(self) -> object:
+    def set_red_node(self):
         self.color = "R"
 
     def printNode(self):
