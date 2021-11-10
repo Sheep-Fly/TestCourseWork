@@ -1,5 +1,5 @@
 # @tree_log
-# 插入用
+# Use for insert
 def check_node(self, node):
     '''
     Check whether the node and parent node are damaged
