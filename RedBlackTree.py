@@ -103,7 +103,7 @@ class RBTree:
             temp_node = temp_node.right
         return temp_node
 
-    # 以node结点为根节点，找到最小结点
+    # Find the smallest node based on root node
     def tree_minimum(self, node):
         """
         Find the minimum node of the tree with node as the root node,
